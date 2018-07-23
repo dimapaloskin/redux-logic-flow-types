@@ -16,9 +16,8 @@ declare module 'redux-logic' {
     processOptions?: {
       dispatchReturn?: boolean,
       dispatchMultiple?: boolean,
-      // TODO: add action creators support
-      sucessType?: $PropertyType<Action, 'type'>,
-      failType?: $PropertyType<Action, 'type'>,
+      sucessType?: (() => Action) | $PropertyType<Action, 'type'>,
+      failType?: (() => Action) | $PropertyType<Action, 'type'>,
     },
     process: Process<Action, State>,
   }
