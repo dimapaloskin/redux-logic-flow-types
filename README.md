@@ -16,7 +16,7 @@ const appInitLogic: Logic<Action, State> = createLogic({
   process({ getState, action }, dispatch, done) {
     const state = getState()
 
-    console.log(state.app.thisPropertyDoesNotExists) // <-- warn
+    console.log(state.app.thisPropertyDoesNotExist) // <-- warn
 
     done()
   },
